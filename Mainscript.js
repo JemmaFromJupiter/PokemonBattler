@@ -621,13 +621,6 @@ function runCheat() {
     userPokemonHP = maxUserHP;
     //always set the playerHP width to 0%
     document.getElementById('playerHealth').style.width = 0 + "%";
-    //resets PP because of only one cheat active at a time
-    maxMove1PP = 20;
-    maxMove2PP = 7;
-    maxMove3PP = 3;
-    userPokemonMove1PP = maxMove1PP;
-    userPokemonMove2PP = maxMove2PP;
-    userPokemonMove3PP = maxMove3PP;
   } else if (cheatCode === "InfPP") {
     //set all PP values to VERY high values
     maxMove1PP = 999999999999;
@@ -636,66 +629,26 @@ function runCheat() {
     userPokemonMove1PP = maxMove1PP;
     userPokemonMove2PP = maxMove2PP;
     userPokemonMove3PP = maxMove3PP;
-    //resets the health beacuse only one cheat active at a time
-    maxUserHP = 140;
-    userPokemonHP = maxUserHP;
   } else if (cheatCode === "OneShot") {
     //set The users damage for all attacks to a high value to completely get rid of the enemies healthbar
     userPokemonMove1Damage = 99999999;
     userPokemonMove2Damage = 99999999;
     userPokemonMove3Damage = 99999999;
-//resets HP because of only one cheat active at a time
-    maxUserHP = 140;
-    userPokemonHP = maxUserHP;
-    //resets PP because of only one cheat active at a time
-    maxMove1PP = 20;
-    maxMove2PP = 7;
-    maxMove3PP = 3;
-    userPokemonMove1PP = maxMove1PP;
-    userPokemonMove2PP = maxMove2PP;
-    userPokemonMove3PP = maxMove3PP;
   } else if (cheatCode === "Wide~") {
     //sets the width of both pokemon to 200% of the div
     document.getElementById('playerPoke').style.width = 200 + "%";
     document.getElementById('enemyPoke').style.width = 200 + "%";
-    //resets HP because of only one cheat active at a time
-    maxUserHP = 140;
-    userPokemonHP = maxUserHP;
-    //resets PP because of only one cheat active at a time
-    maxMove1PP = 20;
-    maxMove2PP = 7;
-    maxMove3PP = 3;
-    userPokemonMove1PP = maxMove1PP;
-    userPokemonMove2PP = maxMove2PP;
-    userPokemonMove3PP = maxMove3PP;
   } else if (cheatCode === "Tall~") {
     //sets the height of each pokemon to 1000% of the div
     document.getElementById('playerPoke').style.height = 1000 + "%";
     document.getElementById('enemyPoke').style.height = 1000 + "%";
-    //resets HP because of only one cheat active at a time
-    maxUserHP = 140;
-    userPokemonHP = maxUserHP;
-    //resets PP because of only one cheat active at a time
-    maxMove1PP = 20;
-    maxMove2PP = 7;
-    maxMove3PP = 3;
-    userPokemonMove1PP = maxMove1PP;
-    userPokemonMove2PP = maxMove2PP;
-    userPokemonMove3PP = maxMove3PP;
   } else if (cheatCode === "01010011 01100101 01100011 01110010 01100101 01110100") {
     //Figure this one out
     location.replace('./ZSecret2.html');
-  } else if (cheatCode === '' || cheatCode != "InfHealth" || "InfPP" || "OneShot" || "Wide~" || "Tall" || "01010011 01100101 01100011 01110010 01100101 01110100") {
+  } else if (cheatCode != "InfHealth" || "InfPP" || "OneShot" || "Wide~" || "Tall" || "01010011 01100101 01100011 01110010 01100101 01110100") {
     //if there is no code, or the code input is not any of the valid codes, print an error
     console.log('Invalid/No Code Input Into Console')
     console.log(Error)
     cheatCode = '';
-    //resets PP because of only one cheat active at a time
-    maxMove1PP = 20;
-    maxMove2PP = 7;
-    maxMove3PP = 3;
-    userPokemonMove1PP = maxMove1PP;
-    userPokemonMove2PP = maxMove2PP;
-    userPokemonMove3PP = maxMove3PP;
   }
 };
