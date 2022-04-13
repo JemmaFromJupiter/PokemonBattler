@@ -1,0 +1,158 @@
+@keyframes Ded {
+  0% {opacity: 100%;}
+  25% {opacity: 75%;}
+  50% {opacity: 50%;}
+  75% {opacity: 25%;}
+  100% {opacity: 0%;}
+}
+
+
+body {
+	background: url('https://media3.giphy.com/media/xWlgutH3ZZF6w/giphy.gif');
+	background-size: cover;
+}
+
+.moveButtonDiv {
+	position: fixed;
+	left: 50%;
+	bottom: 5px;
+	transform: translate(-50%, -25%);
+	margin: 0 auto;
+}
+
+#pokeMove1 {
+	width: 200px;
+	height: 75px;
+	padding: 20px;
+}
+
+#pokeMove2 {
+	width: 200px;
+	height: 75px;
+	padding: 20px;
+}
+
+#pokeMove3 {
+	width: 200px;
+	height: 75px;
+	padding: 20px;
+}
+
+button {
+	border: none;
+  border-radius: 20px;
+}
+
+#startButtonDiv {
+	text-align: center;
+}
+
+#startButton:hover {
+	background: grey;
+}
+
+#poke1:hover,
+#poke2:hover,
+#poke3:hover {
+	background: grey;
+}
+
+#pokeSprites {
+	position: fixed;
+	left: 50%;
+	bottom: 50px;
+	transform: translate(-50%, -50%);
+	margin: 0 auto;
+}
+
+#playerPoke {
+	position: relative;
+	right: 75%;
+	padding-left: 25px;
+	padding-right: 25px;
+	width: 170px;
+	height: 160px;
+  z-index: 1;
+}
+
+#enemyPoke {
+	position: fixed;
+	bottom: 75px;
+	padding-left: 25px;
+	padding-right: 25px;
+	width: 150px;
+	height: 150px;
+}
+
+#pokeMove1:active,
+#pokeMove2:active,
+#pokeMove3:active {
+	background-color: grey;
+}
+
+#playerHealthBG {
+	width: 140px;
+	height: 15px;
+	background-color: lightgrey;
+	fill: green;
+	margin-left: 10px;
+	border: solid black 3px;
+}
+
+#enemyHealthBG {
+	width: 140px;
+	height: 15px;
+	background-color: lightgrey;
+	margin-left: 115px;
+	margin-bottom: 25px;
+	border: solid black 3px;
+}
+
+
+#playerHealth {
+	background: green;
+}
+
+#enemyHealth {
+	background: green;
+}
+
+#revealItems {
+  position: fixed;
+	left: 50%;
+	bottom: 5px;
+	transform: translate(-50%, -25%);
+	margin: 0 auto;
+}
+
+#itemDiv {
+  padding-top: 10px;
+  position: fixed;
+	left: 50%;
+	transform: translate(-50%, -25%);
+	margin: 0 auto;
+}
+
+#item1:active, #item2:active {
+  background-color: gray;
+}
+
+#coin img {
+  text-decoration: none;
+  width: 100px;
+  height: 100px;
+  position: fixed;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  top: 50%;
+	margin: 0 auto;
+}
+
+#coin p {
+  color: white;
+  position: fixed;
+	left: 50%;
+	transform: translate(-50%, -35%);
+  top: 60%;
+	margin: 0 auto;
+}

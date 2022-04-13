@@ -1,0 +1,170 @@
+/*The Background for the entire Game*/
+body {
+	background: url('./Images/Scenes/BattleScene.png');
+  background-size: cover;
+}
+
+/*This centers the pokeMove buttons*/
+.moveButtonDiv {
+	position: fixed;
+	left: 50%;
+	bottom: 5px;
+	transform: translate(-50%, -25%);
+	margin: 0 auto;
+}
+
+/*sets the padding and size of the button*/
+#pokeMove1 {
+	width: 200px;
+	height: 75px;
+	padding: 20px;
+}
+
+/*sets the padding and size of the button*/
+#pokeMove2 {
+	width: 200px;
+	height: 75px;
+	padding: 20px;
+}
+
+/*sets the padding and size of the button*/
+#pokeMove3 {
+	width: 200px;
+	height: 75px;
+	padding: 20px;
+}
+
+/*gives the button no border and rounds off the buttons for a more pleasing look*/
+button {
+	border: none;
+  border-radius: 10px;
+}
+
+/*aligns the text in the div to the center*/
+#startButtonDiv {
+	text-align: center;
+}
+
+/*sets the background colour of the start button to grey after the mouse cursor hovers over it*/
+#startButton:hover {
+	background: grey;
+}
+
+/*sets the background colour of the pokemon selection buttons to grey after the mouse cursor hovers over it*/
+#poke1:hover,
+#poke2:hover,
+#poke3:hover {
+	background: grey;
+}
+
+/*aligns the pokemon sprites to their individual locations beside each other*/
+#pokeSprites {
+	position: fixed;
+	left: 50%;
+	bottom: 50px;
+	transform: translate(-50%, -50%);
+	margin: 0 auto;
+}
+
+/*places the player pokemon to the left of the screen and multiple pixels lower than the enemypokemon*/
+#playerPoke {
+	position: relative;
+	right: 75%;
+	padding-left: 25px;
+	padding-right: 25px;
+	width: 170px;
+	height: 160px;
+  z-index: 1;
+}
+
+/*places the enemy pokemon to the right of the screen and multiple pixels higher than the player pokemon*/
+#enemyPoke {
+	position: fixed;
+	bottom: 75px;
+	padding-left: 25px;
+	padding-right: 25px;
+	width: 150px;
+	height: 150px;
+}
+
+/*sets the background colour of the player move buttons after mouse cursor is hovered over*/
+#pokeMove1:active,
+#pokeMove2:active,
+#pokeMove3:active {
+	background-color: grey;
+}
+
+/*sets the player health backgrounds size, color, margins and border*/
+#playerHealthBG {
+	width: 140px;
+	height: 15px;
+	background-color: lightgrey;
+	fill: green;
+	margin-left: 10px;
+	border: solid black 3px;
+}
+
+/*Sets the enemy pokemons backgound size, color, margins and border.*/
+#enemyHealthBG {
+	width: 140px;
+	height: 15px;
+	margin-left: 115px;
+	margin-bottom: 25px;
+	background-color: lightgrey;
+	border: solid black 3px;
+}
+
+/*sets the colour for the the player health div*/
+#playerHealth {
+	background: green;
+}
+
+/*sets the color for the enemy health div*/
+#enemyHealth {
+	background: green;
+}
+
+/**/
+#revealItems {
+  position: fixed;
+	left: 50%;
+	bottom: 5px;
+	transform: translate(-50%, -25%);
+	margin: 0 auto;
+}
+
+/*the position and centering of the item menu button*/
+#itemDiv {
+  padding-top: 10px;
+  position: fixed;
+	left: 50%;
+	transform: translate(-50%, -25%);
+	margin: 0 auto;
+}
+
+/*sets the colour of the buttons when clicked*/
+#item1:active, #item2:active {
+  background-color: gray;
+}
+
+/*sets the position, and size of the coin also sets the text deco to none so it doesnt have that annoying underline*/
+#coin img {
+  text-decoration: none;
+  width: 100px;
+  height: 100px;
+  position: fixed;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  top: 50%;
+	margin: 0 auto;
+}
+
+/*sets the colour and position of the text underneath the coin*/
+#coin p {
+  color: white;
+  position: fixed;
+	left: 50%;
+	transform: translate(-50%, -35%);
+  top: 60%;
+	margin: 0 auto;
+}

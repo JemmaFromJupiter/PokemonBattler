@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Pokemon Battle 2</title>
+  <link rel="icon" type="image" href="https://www.freepnglogos.com/uploads/alien-png/vector-graphic-alien-victory-stand-show-hand-30.png">
+	<link href="Mainstyle.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <!--Audio Element, Played on game start, Used to spice up the game by allowing the user to listen to the Pokemon ThemeSong-->
+	<audio id="audioID" controls loop style="width:0px;height:0px;">
+		<source src="./Music/PageMusic.mp3" type="audio/mp3">
+	</audio>
+  <!--This is the Pokemon Selection buttons as well as the Start, Mute, And Replay Buttons-->
+	<div id="startButtonDiv">
+    <!--This is the selections for the pokemon, The buttons run functions that assign the corresponding pokemon-->
+		<button onclick="pokemonSelectionFunc1()" id="poke1">Charmander<br><img src="https://thumbs.gfycat.com/AstonishingDisgustingAsp-max-1mb.gif" style="width:150px; height:100px;" id="charmanderGif"></button>
+		<button onclick="pokemonSelectionFunc2()" id="poke2">Bulbasaur<br><img src="https://64.media.tumblr.com/7f6681d74f9ecb8f17e7536c77d97705/tumblr_p8z01gjFDU1svq6hoo10_500.gifv" style="width:150px; height:100px;" id="bulbasaurGif"></button>
+		<button onclick="pokemonSelectionFunc3()" id="poke3">Squirtle<br><img src="https://64.media.tumblr.com/ddd22fe10a485ed56a46d958c058a970/tumblr_n9lnpepqkW1scncwdo1_500.gifv" style="width:150px; height:100px;" id="bulbasaurGif"></button>
+		<br>
+    <!--Start Button, Plays the music on the page as well as enables attack functions and pokemon sprites+health. also assigns pokemon.-->
+		<button onclick="playAud(), playerPokemonAssign(), enemyPokemonAssign(), playGame()" disabled="true" id="startButton">Start</button>
+    <!--Replay button that only activates after all 3 enemy pokemon have fainted-->
+		<button id="replay" onclick="location.reload()" hidden="true">Replay</button>
+    <!--will mute and unmute the pages music depending on what it says (Mute = Mute the music, Unmute = Unmute the music)-->
+    <button onclick='fn3()' id="muteButton">Mute Music</button>
+	</div>
+  <!--ITEMS FOR THE POKEMON TO USE-->
+  <div id="itemDiv" hidden="true">
+    <!--Health Potion with 10 uses, replanishes 50 health of the player pokemon-->
+    <button id="item1" onclick="restoreHP()">Super Potion</button>
+    <!--restores PP in accordance to moves, Move 1 = 10 pp, Move 2 = 7 pp, Move 3 = 2 pp-->
+    <button id="item2" onclick="restorePP()">PP UP</button>
+  </div>
+  <!--A little reward for the player if they beat all three pokemon-->
+  <a href="https://www.youtube.com/watch?v=QtBDL8EiNZo" id="coin" target="_blank" hidden="true"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Gold_coin_icon.png"><br><p>You Won! Take this Coin!</p></a>
+  <!--Hidden Pokemon Sprites that Assign and Activate after selection and Start-->
+	<div id="pokeSprites">
+		<div id="enemyHealthBG" hidden="true">
+			<div id="enemyHealth" hidden="true" style="height:15px;" title="">
+			</div>
+		</div>
+		<br>
+		<img id="playerPoke" src="" hidden="true">
+		<img id="enemyPoke" src="" hidden="true">
+		<br>
+		<p id="pHealthNum"></p>
+		<div id="playerHealthBG" hidden="true">
+			<div id="playerHealth" hidden="true" style="height:15px;" title="">
+			</div>
+		</div>
+	</div>
+  <!--Pokemon Moveset which is replaced with the actual moves based on which pokemon is selected, ex: Charmander = Scratch, Ember, & Flamethrower.-->
+	<div class="moveButtonDiv">
+		<p id="AttackText"></p>
+		<button onclick="pokeMove1()" id="pokeMove1" disabled="true">Placeholder</button>
+		<button onclick="pokeMove2()" id="pokeMove2" disabled="true">Placeholder</button>
+		<button onclick="pokeMove3()" id="pokeMove3" disabled="true">Placeholder</button>
+	</div>
+  <!--Reveals and hides the Items-->
+  <button onclick="showHideItems()" id='revealItems' disabled="true">Items</button>
+	<script src="Mainscript.js"></script>
+</body>
+
+</html>
